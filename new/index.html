@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="title" content="zynntax's portfolio" />
+    <meta name="description" content="zynntax's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zynntax.github.io" />
+    <meta property="og:title" content="zynntax's portfolio" />
+    <meta property="og:description" content="zynntax's Portfolio" />
+    <meta property="og:image" content="image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://zynntax.github.io" />
+    <meta property="twitter:title" content="zynntax's portfolio" />
+    <meta property="twitter:description" content="zynntax's Portfolio" />
+    <meta property="twitter:image" content="image.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<style>
+    html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    z-index: -1;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(16, 16, 16, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    gap: 3rem;
+}
+
+.logo {
+    color: white;
+    font-family: VT323;
+    font-size: 1.8rem;
+}
+
+.nav-link {
+    color: aliceblue;
+    text-decoration: none;
+    font-family: VT323;
+    font-size: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #826372;
+    background: rgba(130, 99, 114, 0.2);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #826372;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-container {
+        justify-content: space-between;
+        padding: 0 1.2rem;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: rgba(16, 16, 16, 0.9);
+        backdrop-filter: blur(15px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        padding: 2rem 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.name {
+    padding-top: 213px;
+    padding-left: 50px;
+    font-family: VT323;
+    color: white;
+    font-size: clamp(4rem, 12vw, 170px);
+    line-height: 0.95;
+}
+
+.title {
+    padding-left: 50px;
+    padding-bottom: 185px;
+    font-family: VT323;
+    color: white;
+    font-size: clamp(1.5rem, 5vw, 20px);
+    line-height: 1;
+    max-width: 850px;
+}
+
+.hero-shapes {
+    position: absolute;
+    top: 150px;
+    right: 80px;
+    pointer-events: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+
+.square {
+    width: 220px;
+    height: 220px;
+    background: #826372;
+    transform: rotate(20deg);
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 200px solid #6d4558;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    transform: translateX(-95px) translateY(-40px);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(20deg); }
+    50% { transform: translateY(-10px) rotate(20deg); }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-shapes {
+        display: none;
+    }
+}
+
+.footer {
+    padding-top: 40px;
+    padding-bottom: 45px;
+    font-size: 16px;
+    font-family: "JetBrains Mono", monospace;
+    text-align: center;
+    color: #6c6c6c;
+}
+
+section {
+    padding: 30px 20px;
+}
+ 
+.journey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+ 
+.journey-box {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    background: rgba(16, 16, 16, 0.7);
+    border: 1px solid rgba(130, 99, 114, 0.4);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    padding: 60px;
+    color: aliceblue;
+    font-family: "JetBrains Mono", monospace;
+}
+ 
+.journey-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+ 
+.journey-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    opacity: 0.9;
+}
+ 
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    align-content: center;
+}
+ 
+.stat {
+    text-align: center;
+    padding: 25px;
+    background: rgba(130, 99, 114, 0.15);
+    border: 1px solid rgba(130, 99, 114, 0.3);
+    border-radius: 18px;
+    transition: 0.3s;
+}
+ 
+.stat:hover {
+    transform: translateY(-6px);
+    background: rgba(130, 99, 114, 0.25);
+}
+ 
+.stat h3 {
+    font-size: 2rem;
+    color: #826372;
+}
+ 
+.stat p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+ 
+@media (max-width: 900px) {
+    .journey {
+        padding: 30px 20px;
+    }
+ 
+    .journey-box {
+        grid-template-columns: 1fr;
+        padding: 30px;
+        gap: 25px;
+        border-radius: 18px;
+    }
+ 
+    .journey-title {
+        font-size: 1.8rem;
+    }
+ 
+    .journey-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+ 
+    .stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+ 
+    .stat {
+        padding: 15px;
+    }
+ 
+    .stat h3 {
+        font-size: 1.5rem;
+    }
+ 
+    .stat p {
+        font-size: 0.75rem;
+    }
+}
+ 
+@media (max-width: 500px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
+ 
+.stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+ 
+.stack-box {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(16, 16, 16, 0.75);
+    border: 1px solid rgba(130, 99, 114, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 70px;
+    color: aliceblue;
+    font-family: "JetBrains Mono", monospace;
+}
+ 
+.stack-title {
+    font-size: 3rem;
+    margin-bottom: 35px;
+}
+ 
+.stack-desc {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    margin-bottom: 40px;
+    max-width: 700px;
+}
+ 
+.stack-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+ 
+.stack-grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.stack-grid3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+ 
+
+.stack-grid3 .stack-card h3 {
+    font-size: 1.9rem;
+}
+
+.stack-grid3 .stack-card p {
+    font-size: 1.1rem;
+}
+
+.stack-grid3 .btn {
+    font-size: 1.05rem;
+    padding: 0.85rem 1.5rem;
+}
+
+
+.stack-card {
+    background: rgba(130, 99, 114, 0.12);
+    border: 1px solid rgba(130, 99, 114, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    transition: 0.3s;
+}
+ 
+.stack-card:hover {
+    transform: translateY(-8px);
+    background: rgba(130, 99, 114, 0.22);
+    border-color: rgba(130, 99, 114, 0.6);
+}
+ 
+.stack-card h3 {
+    font-size: 1.6rem;
+    color: #826372;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(130, 99, 114, 0.3);
+}
+ 
+.stack-card p {
+    flex: 1;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+.stack-grid3 .btn {
+    font-size: 1.05rem;
+    padding: 0.85rem 1.5rem;
+    width: auto;
+    text-align: left;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: rgba(130, 99, 114, 0.2);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(130, 99, 114, 0.4);
+    border-radius: 10px;
+    color: aliceblue;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: auto;
+}
+ 
+.btn:hover {
+    background: rgba(130, 99, 114, 0.4);
+    border-color: rgba(130, 99, 114, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(130, 99, 114, 0.3);
+}
+ 
+@media (max-width: 900px) {
+    .stack {
+        padding: 15px 15px;
+    }
+ 
+    .stack-box {
+        padding: 25px;
+        border-radius: 18px;
+    }
+ 
+    .stack-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+ 
+    .stack-desc {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+        line-height: 1.5;
+    }
+ 
+    .stack-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+ 
+    .stack-grid2 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+ 
+    .stack-card {
+        padding: 18px;
+    }
+ 
+    .stack-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+ 
+    .stack-card p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin: 4px 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+ 
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
+ 
+::-webkit-scrollbar {
+    width: 7px;
+}
+ 
+::-webkit-scrollbar-track {
+    background: #0e0e0e8f;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #232323;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: #4b303d;
+}
+ 
+
+.about-me {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: aliceblue;
+    margin-top: 2rem;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.services {
+    padding: 120px 20px;
+}
+
+.services-box {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services-title {
+    font-size: 48px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(255,255,255,0.18);
+}
+
+.service-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-card p {
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+    opacity: 0.9;
+}
+
+.price {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    font-size: 18px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+
+
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.services-box {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(16, 16, 16, 0.75);
+    border: 1px solid rgba(130, 99, 114, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    padding: 70px;
+    color: aliceblue;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.services-title {
+    font-size: 3rem;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: rgba(130, 99, 114, 0.12);
+    border: 1px solid rgba(130, 99, 114, 0.3);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    transition: 0.3s;
+    color: white;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    background: rgba(130, 99, 114, 0.22);
+    border-color: rgba(130, 99, 114, 0.6);
+}
+
+.service-card h3 {
+    font-size: 1.6rem;
+    color: #826372;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(130, 99, 114, 0.3);
+}
+
+.service-card p {
+    flex: 1;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: aliceblue;
+}
+
+.service-card ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.service-card ul li {
+    margin: 10px 0;
+    color: aliceblue;
+    opacity: 0.9;
+}
+
+.price {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: rgba(130, 99, 114, 0.2);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(130, 99, 114, 0.4);
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 0.95rem;
+    font-family: 'JetBrains Mono', monospace;
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+
+    .services {
+        padding: 15px 15px;
+    }
+
+    .services-box {
+        padding: 25px;
+        border-radius: 18px;
+    }
+
+    .services-title {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+
+    .service-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .service-card ul li {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
+</style>
+
+<body>
+<nav class="navbar">
+    <div class="nav-container">
+
+        <div class="logo"><a href="#home" class="nav-link">zynntax</a></div>
+
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="#about" class="nav-link">O mnie</a>
+            </li>
+            <li class="nav-item">
+                <a href="#skills" class="nav-link">Skille</a>
+            </li>
+            <li class="nav-item">
+                <a href="#projects" class="nav-link">Projekty</a>
+            </li>
+            <li class="nav-item">
+                <a href="#services" class="nav-link">Usługi</a>
+            </li>
+            <li class="nav-item">
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </li>
+        </ul>
+
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+    </div>
+</nav>
+
+<div class="hero" id="home">
+
+    <div class="hero-text">
+        <h1 class="name">zynntaxx</h1>
+
+        <h2 class="title">
+            Pasjonat technologii i tworzenia interaktywnych rozwiązań. Lubię eksperymentować, budować rzeczy od podstaw i rozwijać się poprzez praktyczne projekty.
+        </h2>
+    </div>
+
+    <div class="hero-shapes">
+    <div class="shape square"></div>
+    <div class="shape circle"></div>
+    <div class="shape triangle"></div>
+    </div>
+</div>
+<p class="footer">scrolluj dalej ↓</p>
+<section class="journey" id="about">
+    <br>
+    <div class="journey-box">
+
+        <div class="journey-left">
+            <h2 class="journey-title">Moja droga</h2>
+
+            <p class="journey-text">
+                Interesuję się tworzeniem systemów i zrozumieniem, jak działają od środka.
+                Lubię pracować przy projektach technicznych, eksperymentować i budować rzeczy od podstaw.
+                Szczególnie ciekawi mnie tworzenie gier, testowanie różnych rozwiązań i zamienianie pomysłów w działające prototypy.
+
+                <br><br>
+
+                Poza tym dużo eksperymentuję z systemami, sieciami i technologią — lubię rozkładać rzeczy na części
+                i optymalizować je po swojemu. Najbardziej napędza mnie ciekawość i ciągłe uczenie się nowych rzeczy.
+            </p>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <h3>2</h3>
+                <p>lata doświadczenia</p>
+            </div>
+
+            <div class="stat">
+                <h3>15</h3>
+                <p>lat</p>
+            </div>
+
+            <div class="stat">
+                <h3>2+</h3>
+                <p>projektów</p>
+            </div>
+
+            <div class="stat">
+                <h3>100%</h3>
+                <p>zaangażowania</p>
+            </div>
+        </div>
+        <div id="skills"></div>
+
+    </div>
+</section>
+<section class="stack">
+    <div class="stack-box">
+
+        <h2 class="stack-title">Tech Stack</h2>
+
+        <div class="stack-grid">
+
+            <div class="stack-card">
+                <h3><i class="fa-solid fa-code"></i> Frontend</h3>
+                <p><i class="fa-brands fa-html5"></i> HTML</p>
+                <p><i class="fa-brands fa-css3-alt"></i> CSS</p>
+                <p><i class="fa-brands fa-js"></i> JavaScript</p>
+            </div>
+
+            <div class="stack-card">
+                <h3><i class="fa-solid fa-server"></i> Backend</h3>
+                <p><i class="fa-brands fa-python"></i> Python</p>
+                <p><i class="fa-solid fa-terminal"></i> C++</p>
+                <p><i class="fa-solid fa-moon"></i> Lua</p>
+            </div>
+
+            <div class="stack-card">
+                <h3><i class="fa-solid fa-wrench"></i> Tools</h3>
+                <p><i class="fa-brands fa-linux"></i> Linux</p>
+                <p><i class="fa-solid fa-file-code"></i> VS Code</p>
+                <p><i class="fa-brands fa-git-alt"></i> Git</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="stack" id="projects">
+    <div class="stack-box">
+
+        <h2 class="stack-title">Projekty</h2>
+
+        <div class="stack-grid2">
+
+            <div class="stack-card">
+                <h3><i class="fa-solid fa-computer"></i> XyraOS</h3>
+                <p>XyraOS to lekki i zoptymalizowany system operacyjny stworzony specjalnie do łatwego hostowania i zarządzania serwerami gier. Oparty na Debian Stable łączy niezawodność z uproszczonym środowiskiem zaprojektowanym pod serwery multiplayer. Zawiera wbudowane narzędzia oraz instalację jednym kliknięciem, aby uprościć konfigurację i zarządzanie.</p>
+                <a class="btn" href="zynntax.github.io/xyra" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Sprawdź</a>
+            </div>
+
+            <div class="stack-card">
+                <h3><i class="fa-solid fa-gamepad"></i> The Banished Knight</h3>
+                <p>To jest demo gry 2D typu platformer, w której wcielasz się w rycerza niesłusznie skazanego i uwięzionego w mrocznym więzieniu. Przemierzaj niebezpieczne lochy, unikaj śmiertelnych pułapek i walcz z przeciwnikami, odkrywając prawdę stojącą za niesprawiedliwym wyrokiem. Wykorzystując umiejętności, refleks i odwagę, rycerz walczy o wolność i sprawiedliwość w świecie, który się od niego odwrócił.</p>
+                <a class="btn" href="zynntax.github.io/tbk" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> Sprawdź</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section class="services" id="services">
+    <div class="services-box">
+
+        <h2 class="services-title">Usługi</h2>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <h3><i class="fa-solid fa-globe"></i> Hosting Portfolio</h3>
+
+                <p>
+                    Hosting lekkich stron typu portfolio, landing page lub wizytówka.
+                    Konfiguracja domeny, SSL oraz szybkie wdrożenie gotowej strony.
+                </p>
+
+                <ul>
+                    <li>✔️ SSL HTTPS</li>
+                    <li>✔️ Podpięcie domeny</li>
+                    <li>✔️ Szybki hosting</li>
+                    <li>✔️ Wsparcie techniczne</li>
+                </ul>
+
+                <a class="price" href="#contact">od 10zł / miesiąc</a>
+            </div>
+
+            <div class="service-card">
+                <h3><i class="fa-solid fa-server"></i> VPS / Linux Setup</h3>
+
+                <p>
+                    Konfiguracja serwerów Linux, reverse proxy, Docker,
+                    zabezpieczenia i podstawowa administracja.
+                </p>
+
+                <ul>
+                    <li>✔️ Docker</li>
+                    <li>✔️ Nginx</li>
+                    <li>✔️ Firewall</li>
+                    <li>✔️ Monitoring</li>
+                </ul>
+
+                <a class="price" href="#contact">indywidualna wycena</a>
+            </div>
+
+            <div class="service-card">
+                <h3><i class="fa-solid fa-code"></i> Tworzenie Stron</h3>
+
+                <p>
+                    Tworzenie nowoczesnych stron internetowych
+                    w minimalistycznym i responsywnym stylu.
+                </p>
+
+                <ul>
+                    <li>✔️ Responsive</li>
+                    <li>✔️ Nowoczesny design</li>
+                    <li>✔️ Szybkie ładowanie</li>
+                    <li>✔️ SEO basics</li>
+                </ul>
+
+                <a class="price" href="#contact">od 50zł</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section id="contact" class="stack">
+    <div class="stack-box">
+        <h2 class="stack-title">Kontakt</h2>
+        <div class="stack-grid3">
+
+            <div class="stack-card">
+                <h3>Napisz do mnie</h3>
+                <p style="margin-bottom: 15px;">Chętnie pogadam o projektach, współpracy albo po prostu o technologii.</p>
+                <a class="btn" href="mailto:zynntax@mail.pl" target="_blank" style="margin-bottom: 10px;">
+    <i class="fa-solid fa-envelope"></i> zynntax@mail.pl
+</a>
+<a class="btn" href="https://github.com/zynntax" target="_blank" style="margin-bottom: 10px;">
+    <i class="fa-brands fa-github"></i> @zynntax
+</a>
+<button id="copyBtn" class="btn" style="margin-bottom: 10px;">
+    <i class="fa-brands fa-discord"></i> @zynntax
+</button>
+<a class="btn" href="https://t.me/zynntaxx" target="_blank">
+    <i class="fa-brands fa-telegram"></i> @zynntax
+</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<footer class="about-me">&COPY; 2026 zynntax. Wszystkie prawa zastrzeżone.</footer>
+
+<script>
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+});
+
+
+document.getElementById("copyBtn").addEventListener("click", () => {
+    navigator.clipboard.writeText("zynntax")
+        .then(() => alert("Skopiowano!"))
+        .catch(err => console.error(err));
+});
+
+</script>
+</script>
+</body>
+</html>
